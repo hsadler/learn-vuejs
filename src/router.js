@@ -1,12 +1,13 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 import Home from './views/Home.vue'
 import About from './views/About.vue'
-import Test1 from './views/Test1.vue'
+import RouterTest from './views/RouterTest.vue'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
+export default new VueRouter({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -19,9 +20,9 @@ export default new Router({
       component: About
     },
     {
-      path: '/test1',
-      name: 'test1',
-      component: Test1
+      path: '/router-test',
+      name: 'RouterTest',
+      component: RouterTest
     }
   ]
 })

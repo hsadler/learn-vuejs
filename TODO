@@ -1,0 +1,37 @@
+
+Router/Urls:
+    X git rid of hashbang in url
+    - routes
+    - sub-routes
+    - query params
+    - redirects
+    - 404s
+
+Templates/Directives:
+    - bindings
+    - props
+    - class styles
+    - lists
+    - conditional rendering
+    - computed properties
+    - watchers
+    - event handling
+    - composition with components
+
+State:
+    - services
+    - dependency inject services into components
+
+API calls:
+    - make it work
+
+Styles:
+    - global/component/scoped scss
+
+UI Framework:
+    - incorporate Vuetify
+    - test layouts and components
+
+
+
+

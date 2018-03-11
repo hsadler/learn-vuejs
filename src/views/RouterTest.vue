@@ -1,18 +1,16 @@
 <template>
-  <div class="home">
-    <h1>I'm the test1</h1>
+  <div>
+    <h1>Router Test</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'test1',
+  name: 'routerTest',
   components: {}
 }
 </script>
 
 <style scoped lang="scss">
-h1 {
-  color: green;
-}
+  // styles here
 </style>
