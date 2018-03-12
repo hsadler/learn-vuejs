@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import Home from './views/Home.vue'
 import About from './views/About.vue'
 
+// getting to know vue-router
 import RouterTest from './views/router-test/RouterTest.vue'
 import NormalRoute from './views/router-test/NormalRoute.vue'
 import DynamicRoute from './views/router-test/DynamicRoute.vue'
@@ -13,12 +14,14 @@ import NestedB from './views/router-test/nested/NestedB.vue'
 import WithQueryParams from './views/router-test/WithQueryParams.vue'
 import ToRedirect from './views/router-test/ToRedirect.vue'
 import Redirected from './views/router-test/Redirected.vue'
+import To404 from './views/router-test/To404.vue'
 
 Vue.use(VueRouter)
 
 export default new VueRouter({
   mode: 'history',
   routes: [
+
     {
       path: '/',
       name: 'home',
@@ -77,6 +80,11 @@ export default new VueRouter({
       path: '/redirected',
       name: 'Redirected',
       component: Redirected
+    },
+    {
+      path: '*',
+      name: 'To404',
+      component: To404
     }
 
   ]

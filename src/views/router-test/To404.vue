@@ -1,23 +1,24 @@
 <template>
   <div>
-    <h1>Router Testing</h1>
-    <router-link to="normal-route">normal route</router-link>
-    <router-link to="sub-route">sub-route</router-link>
-    <router-link to="with-query-params">with query params</router-link>
-    <router-link to="to-redirect">to redirect</router-link>
+    <h1>404 - PAGE NOT FOUND</h1>
+    <button @click="goBack()">Go back</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'routerTest',
-  components: {}
+  name: 'to404',
+  components: {},
+  methods: {
+    goBack () {
+      this.$router.go(-1)
+    }
+  }
 }
 </script>
 
 <style scoped lang="scss">
-  a {
-    display: block;
-    margin: 10px 0;
+  button {
+    cursor: pointer;
   }
 </style>

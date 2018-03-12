@@ -6,8 +6,8 @@ Router/Urls:
     X nested routes
     X query params
     X redirects
-    - 404s
-    - programmatic navigation
+    X 404s
+    X programmatic navigation
 
 Templates/Directives:
     - bindings
