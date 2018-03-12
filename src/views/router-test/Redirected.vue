@@ -1,19 +1,18 @@
 <template>
   <div>
-    <h1>To Redirect</h1>
-    <p>User should never see this</p>
+    <h1>Redirected</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'toRedirect',
+  name: 'redirected',
   components: {}
 }
 </script>
 
 <style scoped lang="scss">
-  p {
+  h1 {
     color: red;
   }
 </style>

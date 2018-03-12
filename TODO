@@ -3,10 +3,11 @@ Router/Urls:
     X git rid of hashbang in url
     X routes
     X dynamic route
-    - nested routes
-    - query params
-    - redirects
+    X nested routes
+    X query params
+    X redirects
     - 404s
+    - programmatic navigation
 
 Templates/Directives:
     - bindings
@@ -15,6 +16,7 @@ Templates/Directives:
     - lists
     - conditional rendering
     - computed properties
+    - scope methods
     - watchers
     - event handling
     - composition with components

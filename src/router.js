@@ -12,6 +12,7 @@ import NestedA from './views/router-test/nested/NestedA.vue'
 import NestedB from './views/router-test/nested/NestedB.vue'
 import WithQueryParams from './views/router-test/WithQueryParams.vue'
 import ToRedirect from './views/router-test/ToRedirect.vue'
+import Redirected from './views/router-test/Redirected.vue'
 
 Vue.use(VueRouter)
 
@@ -69,7 +70,13 @@ export default new VueRouter({
     {
       path: '/to-redirect',
       name: 'ToRedirect',
-      component: ToRedirect
+      component: ToRedirect,
+      redirect: { name: 'Redirected' }
+    },
+    {
+      path: '/redirected',
+      name: 'Redirected',
+      component: Redirected
     }
 
   ]
