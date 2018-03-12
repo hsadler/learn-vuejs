@@ -1,8 +1,9 @@
 
 Router/Urls:
     X git rid of hashbang in url
-    - routes
-    - sub-routes
+    X routes
+    X dynamic route
+    - nested routes
     - query params
     - redirects
     - 404s
