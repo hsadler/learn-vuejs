@@ -4,12 +4,14 @@ import VueRouter from 'vue-router'
 import Home from './views/Home.vue'
 import About from './views/About.vue'
 
-import RouterTest from './views/RouterTest/RouterTest.vue'
-import NormalRoute from './views/RouterTest/NormalRoute.vue'
-import DynamicRoute from './views/RouterTest/DynamicRoute.vue'
-import NestedRoute from './views/RouterTest/NestedRoute.vue'
-import WithQueryParams from './views/RouterTest/WithQueryParams.vue'
-import ToRedirect from './views/RouterTest/ToRedirect.vue'
+import RouterTest from './views/router-test/RouterTest.vue'
+import NormalRoute from './views/router-test/NormalRoute.vue'
+import DynamicRoute from './views/router-test/DynamicRoute.vue'
+import NestedRoute from './views/router-test/NestedRoute.vue'
+import NestedA from './views/router-test/nested/NestedA.vue'
+import NestedB from './views/router-test/nested/NestedB.vue'
+import WithQueryParams from './views/router-test/WithQueryParams.vue'
+import ToRedirect from './views/router-test/ToRedirect.vue'
 
 Vue.use(VueRouter)
 
@@ -45,7 +47,19 @@ export default new VueRouter({
     {
       path: '/nested-route',
       name: 'NestedRoute',
-      component: NestedRoute
+      component: NestedRoute,
+      children: [
+        {
+          path: 'nested-a',
+          name: 'NestedA',
+          component: NestedA
+        },
+        {
+          path: 'nested-b',
+          name: 'NestedB',
+          component: NestedB
+        }
+      ]
     },
     {
       path: '/with-query-params',

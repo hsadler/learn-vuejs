@@ -3,21 +3,21 @@
     <h1>Router Testing</h1>
     <div class="routes">
 
-      <router-link to="normal-route">normal route</router-link>
+      <router-link to="/normal-route">normal route</router-link>
 
       <router-link
-        :to="'dynamic-route/' + dynamicRouteId"
+        :to="'/dynamic-route/' + dynamicRouteId"
       >
-        dynamic route with id:{{dynamicRouteId}}
+        dynamic route with id: {{dynamicRouteId}}
       </router-link>
 
-      <router-link to="nested-route">nested route</router-link>
+      <router-link to="/nested-route">nested route</router-link>
 
-      <router-link to="with-query-params">with query params</router-link>
+      <router-link to="/with-query-params">with query params</router-link>
 
-      <router-link to="to-redirect">to redirect</router-link>
+      <router-link to="/to-redirect">to redirect</router-link>
 
-      <router-link to="to-404">to 404</router-link>
+      <router-link to="/to-404">to 404</router-link>
 
     </div>
   </div>
@@ -34,6 +34,7 @@ export default {
   },
   computed: {
     dynamicRouteId () {
+      // use of the underscore library
       return this.$_.sample(this.dynamicRouteIds)
     }
   }
@@ -44,7 +45,6 @@ export default {
   div.routes {
     width: 400px;
     margin: 0 auto;
-    border: 1px solid grey;
     a {
       display: block;
       margin: 10px 0;
