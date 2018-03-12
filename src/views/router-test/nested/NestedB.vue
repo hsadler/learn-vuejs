@@ -17,7 +17,7 @@ export default {
     margin: 0 auto;
     border: 1px solid grey;
     h2 {
-      color: orange;
+      color: LightSkyBlue;
     }
   }
 </style>

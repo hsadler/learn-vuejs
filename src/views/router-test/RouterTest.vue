@@ -5,15 +5,15 @@
 
       <router-link to="/normal-route">normal route</router-link>
 
-      <router-link
-        :to="'/dynamic-route/' + dynamicRouteId"
-      >
+      <router-link :to="dynamicRoute">
         dynamic route with id: {{dynamicRouteId}}
       </router-link>
 
       <router-link to="/nested-route">nested route</router-link>
 
-      <router-link to="/with-query-params">with query params</router-link>
+      <router-link :to="{name:'WithQueryParams', query:queryParams}">
+        with query params: {{ queryParams }}
+      </router-link>
 
       <router-link to="/to-redirect">to redirect</router-link>
 
@@ -29,13 +29,17 @@ export default {
   components: {},
   data () {
     return {
-      dynamicRouteIds: [123, 456, 789]
+      dynamicRouteIds: [111, 222, 333, 444, 555, 666, 777, 888, 999],
+      queryParams: { user: 'harry' }
     }
   },
   computed: {
     dynamicRouteId () {
       // use of the underscore library
       return this.$_.sample(this.dynamicRouteIds)
+    },
+    dynamicRoute () {
+      return '/dynamic-route/' + this.dynamicRouteId
     }
   }
 }
