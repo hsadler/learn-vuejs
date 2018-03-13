@@ -12,8 +12,8 @@ Router/Urls:
 Components:
     X data
     X computed
-    - bindings
     - props
+    - bindings
     - scope methods
     - watchers
     - event handling
