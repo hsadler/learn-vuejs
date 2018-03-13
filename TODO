@@ -12,11 +12,11 @@ Router/Urls:
 Components:
     X data
     X computed
-    - props
-    - bindings
-    - scope methods
+    X props
+    X methods
     - watchers
     - event handling
+    - options/lifecycle hooks
     - composition with components
 
 Directives:

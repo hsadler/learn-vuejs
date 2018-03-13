@@ -8,6 +8,7 @@
       :passcode="4321"
       :time="time"
     ></ComponentTestProps>
+    <ComponentTestMethods></ComponentTestMethods>
   </div>
 </template>
 
@@ -15,13 +16,15 @@
 import ComponentTestData from '@/components/components-test/ComponentTestData'
 import ComponentTestComputed from '@/components/components-test/ComponentTestComputed'
 import ComponentTestProps from '@/components/components-test/ComponentTestProps'
+import ComponentTestMethods from '@/components/components-test/ComponentTestMethods'
 
 export default {
   name: 'ComponentsTest',
   components: {
     ComponentTestData,
     ComponentTestComputed,
-    ComponentTestProps
+    ComponentTestProps,
+    ComponentTestMethods
   },
   data () {
     return {
