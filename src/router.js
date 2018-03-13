@@ -16,6 +16,10 @@ import ToRedirect from './views/router-test/ToRedirect.vue'
 import Redirected from './views/router-test/Redirected.vue'
 import To404 from './views/router-test/To404.vue'
 
+// getting to know components and directives
+import ComponentsTest from './views/ComponentsTest.vue'
+import DirectivesTest from './views/DirectivesTest.vue'
+
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -85,6 +89,17 @@ export default new VueRouter({
       path: '*',
       name: 'To404',
       component: To404
+    },
+
+    {
+      path: '/components-test',
+      name: 'ComponentsTest',
+      component: ComponentsTest
+    },
+    {
+      path: '/directives-test',
+      name: 'DirectivesTest',
+      component: DirectivesTest
     }
 
   ]

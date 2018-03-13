@@ -9,21 +9,24 @@ Router/Urls:
     X 404s
     X programmatic navigation
 
-Templates/Directives:
+Components:
+    X data
+    - computed
     - bindings
     - props
-    - class styles
-    - lists
-    - conditional rendering
-    - computed properties
     - scope methods
     - watchers
     - event handling
     - composition with components
 
+Directives:
+    - class styles
+    - lists
+    - conditional rendering
+
 State:
     - services
-    - dependency inject services into components
+    - dependency injection for services into components
 
 API calls:
     - make it work
