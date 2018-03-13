@@ -9,6 +9,7 @@
       :time="time"
     ></ComponentTestProps>
     <ComponentTestMethods></ComponentTestMethods>
+    <ComponentTestWatch></ComponentTestWatch>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import ComponentTestData from '@/components/components-test/ComponentTestData'
 import ComponentTestComputed from '@/components/components-test/ComponentTestComputed'
 import ComponentTestProps from '@/components/components-test/ComponentTestProps'
 import ComponentTestMethods from '@/components/components-test/ComponentTestMethods'
+import ComponentTestWatch from '@/components/components-test/ComponentTestWatch'
 
 export default {
   name: 'ComponentsTest',
@@ -24,7 +26,8 @@ export default {
     ComponentTestData,
     ComponentTestComputed,
     ComponentTestProps,
-    ComponentTestMethods
+    ComponentTestMethods,
+    ComponentTestWatch
   },
   data () {
     return {
