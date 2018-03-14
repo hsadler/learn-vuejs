@@ -19,7 +19,8 @@
 
     <ComponentTestEvents
       :time="time"
-      @resetTime="resetTime()"
+      @resetTime="resetTime"
+      @setTime="setTime"
     ></ComponentTestEvents>
 
   </div>
@@ -56,6 +57,9 @@ export default {
   methods: {
     resetTime () {
       this.time = 0
+    },
+    setTime (newTime) {
+      this.time = newTime
     }
   }
 }
