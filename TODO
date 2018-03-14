@@ -16,13 +16,21 @@ Components:
     X methods
     X watchers
     X event handling
-    - options/lifecycle hooks
-    - composition with components
 
 Directives:
-    - class styles
-    - lists
-    - conditional rendering
+    X v-text
+    X v-html
+    X v-show
+    X v-if
+    X v-else
+    X v-else-if
+    X v-for
+    - v-on
+    - v-bind
+    - v-model
+    - v-pre
+    - v-cloak
+    - v-once
 
 State:
     - services
