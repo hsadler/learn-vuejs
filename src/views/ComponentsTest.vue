@@ -1,15 +1,27 @@
 <template>
   <div class="components-test-container">
+
     <h1>Components Testing</h1>
+
     <ComponentTestData></ComponentTestData>
+
     <ComponentTestComputed></ComponentTestComputed>
+
     <ComponentTestProps
       :username="'Willow'"
       :passcode="4321"
       :time="time"
     ></ComponentTestProps>
+
     <ComponentTestMethods></ComponentTestMethods>
+
     <ComponentTestWatch></ComponentTestWatch>
+
+    <ComponentTestEvents
+      :time="time"
+      @resetTime="resetTime()"
+    ></ComponentTestEvents>
+
   </div>
 </template>
 
@@ -19,6 +31,7 @@ import ComponentTestComputed from '@/components/components-test/ComponentTestCom
 import ComponentTestProps from '@/components/components-test/ComponentTestProps'
 import ComponentTestMethods from '@/components/components-test/ComponentTestMethods'
 import ComponentTestWatch from '@/components/components-test/ComponentTestWatch'
+import ComponentTestEvents from '@/components/components-test/ComponentTestEvents'
 
 export default {
   name: 'ComponentsTest',
@@ -27,7 +40,8 @@ export default {
     ComponentTestComputed,
     ComponentTestProps,
     ComponentTestMethods,
-    ComponentTestWatch
+    ComponentTestWatch,
+    ComponentTestEvents
   },
   data () {
     return {
@@ -38,6 +52,11 @@ export default {
     setInterval(() => {
       this.time += 1
     }, 1000)
+  },
+  methods: {
+    resetTime () {
+      this.time = 0
+    }
   }
 }
 </script>

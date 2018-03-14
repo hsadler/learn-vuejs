@@ -14,8 +14,8 @@ Components:
     X computed
     X props
     X methods
-    - watchers
-    - event handling
+    X watchers
+    X event handling
     - options/lifecycle hooks
     - composition with components
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>{{ $options.name }}</h2>
-    <p>async value: {{ asyncVal }}</p>
+    <p>async value: {{ asyncVal ? asyncVal : 'null' }}</p>
     <p>get async value status: {{ asyncValStatus }}</p>
     <button @click="getAsyncVal()">Get async value</button>
   </div>
@@ -19,7 +19,7 @@ export default {
   methods: {
     getAsyncVal () {
       this.asyncVal = null
-      this.asyncValStatus = 'getting'
+      this.asyncValStatus = 'getting...'
       setTimeout(() => {
         this.asyncVal = 'Hello!'
       }, 2000)
