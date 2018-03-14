@@ -25,12 +25,10 @@ Directives:
     X v-else
     X v-else-if
     X v-for
-    - v-on
-    - v-bind
-    - v-model
-    - v-pre
-    - v-cloak
-    - v-once
+    X v-on
+    X v-bind
+    X v-model
+    X v-pre
 
 State:
     - services
