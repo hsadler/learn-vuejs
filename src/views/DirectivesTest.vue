@@ -102,9 +102,6 @@ export default {
     width: 400px;
     margin: 0 auto;
     padding-bottom: 100px;
-    .green {
-      color: green;
-    }
     .purple {
       color: purple;
     }

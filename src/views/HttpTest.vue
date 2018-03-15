@@ -31,6 +31,5 @@ export default {
     width: 500px;
     margin: 0 auto;
     padding-bottom: 100px;
-    .green { color: green; }
   }
 </style>

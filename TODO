@@ -38,7 +38,7 @@ API calls:
     X make it work
 
 Styles:
-    - global/component/scoped scss
+    X global/scoped scss
 
 UI Framework:
     - incorporate Vuetify
