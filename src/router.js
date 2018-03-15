@@ -20,6 +20,9 @@ import To404 from './views/router-test/To404.vue'
 import ComponentsTest from './views/ComponentsTest.vue'
 import DirectivesTest from './views/DirectivesTest.vue'
 
+// getting to know store
+import StoreTest from './views/StoreTest.vue'
+
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -100,6 +103,11 @@ export default new VueRouter({
       path: '/directives-test',
       name: 'DirectivesTest',
       component: DirectivesTest
+    },
+    {
+      path: '/store-test',
+      name: 'StoreTest',
+      component: StoreTest
     }
 
   ]

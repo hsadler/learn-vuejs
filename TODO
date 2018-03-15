@@ -31,8 +31,8 @@ Directives:
     X v-pre
 
 State:
-    - services
-    - dependency injection for services into components
+    X services
+    X dependency injection for services into components
 
 API calls:
     - make it work
