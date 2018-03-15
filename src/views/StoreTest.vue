@@ -24,7 +24,7 @@
 
 <script>
 // store provided by direct import
-import store from '@/store'
+import store from '@/services/store'
 // services service used for dependecy injection
 import services from '@/services'
 

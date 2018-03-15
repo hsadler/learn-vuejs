@@ -35,7 +35,7 @@ State:
     X dependency injection for services into components
 
 API calls:
-    - make it work
+    X make it work
 
 Styles:
     - global/component/scoped scss

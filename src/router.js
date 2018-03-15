@@ -20,8 +20,11 @@ import To404 from './views/router-test/To404.vue'
 import ComponentsTest from './views/ComponentsTest.vue'
 import DirectivesTest from './views/DirectivesTest.vue'
 
-// getting to know store
+// getting to know store (state managment)
 import StoreTest from './views/StoreTest.vue'
+
+// getting to know http (API calls)
+import HttpTest from './views/HttpTest.vue'
 
 Vue.use(VueRouter)
 
@@ -108,6 +111,11 @@ export default new VueRouter({
       path: '/store-test',
       name: 'StoreTest',
       component: StoreTest
+    },
+    {
+      path: '/http-test',
+      name: 'HttpTest',
+      component: HttpTest
     }
 
   ]

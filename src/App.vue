@@ -6,7 +6,8 @@
       <router-link to="/router-test">Router Test</router-link> |
       <router-link to="/components-test">Components Test</router-link> |
       <router-link to="/directives-test">Directives Test</router-link> |
-      <router-link to="/store-test">Store Test</router-link>
+      <router-link to="/store-test">Store Test</router-link> |
+      <router-link to="/http-test">Http Test</router-link>
     </div>
     <router-view></router-view>
   </div>
