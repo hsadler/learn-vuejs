@@ -2,7 +2,6 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
       <router-link to="/router-test">Router Test</router-link> |
       <router-link to="/components-test">Components Test</router-link> |
       <router-link to="/directives-test">Directives Test</router-link> |
@@ -14,14 +13,8 @@
 </template>
 
 <style lang="scss">
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    .green { color: green }
-  }
+  @import 'src/styles/app-global.scss';
+
   #nav {
     padding: 30px;
     a {

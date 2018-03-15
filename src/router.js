@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Home from './views/Home.vue'
-import About from './views/About.vue'
 
 // getting to know vue-router
 import RouterTest from './views/router-test/RouterTest.vue'
@@ -36,11 +35,6 @@ export default new VueRouter({
       path: '/',
       name: 'home',
       component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: About
     },
 
     {
