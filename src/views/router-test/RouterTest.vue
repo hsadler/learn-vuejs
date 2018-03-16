@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>Router Testing</h1>
+    <Navigation></Navigation>
+    <h1>Router Test</h1>
     <div class="routes">
 
       <router-link to="/normal-route">normal route</router-link>
@@ -24,9 +25,13 @@
 </template>
 
 <script>
+import Navigation from '@/components/Navigation'
+
 export default {
   name: 'routerTest',
-  components: {},
+  components: {
+    Navigation
+  },
   data () {
     return {
       dynamicRouteIds: [111, 222, 333, 444, 555, 666, 777, 888, 999],

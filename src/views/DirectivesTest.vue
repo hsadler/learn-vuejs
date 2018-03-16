@@ -1,72 +1,80 @@
 <template>
-  <div class="directives-test-container">
+  <div>
+    <Navigation></Navigation>
+    <div class="directives-test-container">
 
-    <h1>Directives Test</h1>
+      <h1>Directives Test</h1>
 
-    <p>v-text: <span v-text="myText"></span></p>
+      <p>v-text: <span v-text="myText"></span></p>
 
-    <hr>
+      <hr>
 
-    <p>v-html: <span v-html="myHtml"></span></p>
+      <p>v-html: <span v-html="myHtml"></span></p>
 
-    <hr>
+      <hr>
 
-    <p>v-show:
-      <span @mouseover="toggleShow">hover me</span>
-      <span v-show="isShown"> peekaboo..</span>
-    </p>
+      <p>v-show:
+        <span @mouseover="toggleShow">hover me</span>
+        <span v-show="isShown"> peekaboo..</span>
+      </p>
 
-    <hr>
+      <hr>
 
-    <p v-if="mode === 0">v-if: <span>mode={{ mode }}</span></p>
-    <p v-else-if="mode === 1">v-else-if: <span>mode={{ mode }}</span></p>
-    <p v-else>v-else: <span>mode={{ mode }}</span></p>
-    <button @click="updateMode">update mode</button>
+      <p v-if="mode === 0">v-if: <span>mode={{ mode }}</span></p>
+      <p v-else-if="mode === 1">v-else-if: <span>mode={{ mode }}</span></p>
+      <p v-else>v-else: <span>mode={{ mode }}</span></p>
+      <button @click="updateMode">update mode</button>
 
-    <hr>
+      <hr>
 
-    <p>v-for:</p>
-    <p
-      class="green"
-      v-for="(score, index) in scores"
-      :key="score"
-    >
-        {{ index + ': ' + score }}
-    </p>
+      <p>v-for:</p>
+      <p
+        class="green"
+        v-for="(score, index) in scores"
+        :key="score"
+      >
+          {{ index + ': ' + score }}
+      </p>
 
-    <hr>
+      <hr>
 
-    <p>v-on:</p>
-    <p class="green">keydown key: {{ currEvent ? currEvent.key : 'none' }}</p>
-    <input
-      v-on:keydown="viewEvent($event)"
-      placeholder="type here"
-    >
+      <p>v-on:</p>
+      <p class="green">keydown key: {{ currEvent ? currEvent.key : 'none' }}</p>
+      <input
+        v-on:keydown="viewEvent($event)"
+        placeholder="type here"
+      >
 
-    <hr>
+      <hr>
 
-    <p>v-bind:</p>
-    <p v-bind:class="classStr">Style me with class: {{ classStr }}</p>
+      <p>v-bind:</p>
+      <p v-bind:class="classStr">Style me with class: {{ classStr }}</p>
 
-    <hr>
+      <hr>
 
-    <p>v-model:</p>
-    <textarea v-model="textareaInput" placeholder="type here"></textarea>
-    <p>
-      <strong>What you've entered:</strong><br>
-      <span>{{textareaInput}}</span>
-    </p>
+      <p>v-model:</p>
+      <textarea v-model="textareaInput" placeholder="type here"></textarea>
+      <p>
+        <strong>What you've entered:</strong><br>
+        <span>{{textareaInput}}</span>
+      </p>
 
-    <hr>
+      <hr>
 
-    <p v-pre>v-pre: <span>{{ notCompiled }}</span></p>
+      <p v-pre>v-pre: <span>{{ notCompiled }}</span></p>
 
+    </div>
   </div>
 </template>
 
 <script>
+import Navigation from '@/components/Navigation'
+
 export default {
   name: 'DirectivesTest',
+  components: {
+    Navigation
+  },
   data () {
     return {
       myText: 'Hello, World!',

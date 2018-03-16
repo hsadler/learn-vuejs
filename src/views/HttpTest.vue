@@ -1,16 +1,24 @@
 <template>
-  <div class="http-test-container">
-    <h1>Http Test</h1>
-    <p>the http response:</p>
-    <p class="green">{{ httpResponse }}</p>
+  <div>
+    <Navigation></Navigation>
+    <div class="http-test-container">
+      <h1>Http Test</h1>
+      <p>the http response:</p>
+      <p class="green">{{ httpResponse }}</p>
+    </div>
   </div>
 </template>
 
 <script>
+import Navigation from '@/components/Navigation'
+
 import services from '@/services'
 
 export default {
   name: 'HttpTest',
+  components: {
+    Navigation
+  },
   data () {
     return {
       httpService: services.use('httpService'),

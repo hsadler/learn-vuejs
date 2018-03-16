@@ -1,32 +1,36 @@
 <template>
-  <div class="components-test-container">
+  <div>
+    <Navigation></Navigation>
+    <div class="components-test-container">
 
-    <h1>Components Testing</h1>
+      <h1>Components Test</h1>
 
-    <ComponentTestData></ComponentTestData>
+      <ComponentTestData></ComponentTestData>
 
-    <ComponentTestComputed></ComponentTestComputed>
+      <ComponentTestComputed></ComponentTestComputed>
 
-    <ComponentTestProps
-      :username="'Willow'"
-      :passcode="4321"
-      :time="time"
-    ></ComponentTestProps>
+      <ComponentTestProps
+        :username="'Willow'"
+        :passcode="4321"
+        :time="time"
+      ></ComponentTestProps>
 
-    <ComponentTestMethods></ComponentTestMethods>
+      <ComponentTestMethods></ComponentTestMethods>
 
-    <ComponentTestWatch></ComponentTestWatch>
+      <ComponentTestWatch></ComponentTestWatch>
 
-    <ComponentTestEvents
-      :time="time"
-      @resetTime="resetTime"
-      @setTime="setTime"
-    ></ComponentTestEvents>
+      <ComponentTestEvents
+        :time="time"
+        @resetTime="resetTime"
+        @setTime="setTime"
+      ></ComponentTestEvents>
 
+    </div>
   </div>
 </template>
 
 <script>
+import Navigation from '@/components/Navigation'
 import ComponentTestData from '@/components/components-test/ComponentTestData'
 import ComponentTestComputed from '@/components/components-test/ComponentTestComputed'
 import ComponentTestProps from '@/components/components-test/ComponentTestProps'
@@ -37,6 +41,7 @@ import ComponentTestEvents from '@/components/components-test/ComponentTestEvent
 export default {
   name: 'ComponentsTest',
   components: {
+    Navigation,
     ComponentTestData,
     ComponentTestComputed,
     ComponentTestProps,

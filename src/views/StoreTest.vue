@@ -1,28 +1,33 @@
 <template>
-  <div class="store-test-container">
+  <div>
+    <Navigation></Navigation>
+    <div class="store-test-container">
 
-    <h1>Store Test</h1>
+      <h1>Store Test</h1>
 
-    <hr>
+      <hr>
 
-    <p>timer data and methods from direct import:</p>
-    <p class="green">store time: {{ services.storeFromImport.timer }}</p>
-    <button @click="services.storeFromImport.startTimer()">start time</button>
-    <button @click="services.storeFromImport.stopTimer()">stop timer</button>
+      <p>timer data and methods from direct import:</p>
+      <p class="green">store time: {{ services.storeFromImport.timer }}</p>
+      <button @click="services.storeFromImport.startTimer()">start time</button>
+      <button @click="services.storeFromImport.stopTimer()">stop timer</button>
 
-    <hr>
+      <hr>
 
-    <p>timer data and methods from services dependecy injection:</p>
-    <p class="green">store time: {{ services.storeFromInjection.timer }}</p>
-    <button @click="services.storeFromInjection.startTimer()">start time</button>
-    <button @click="services.storeFromInjection.stopTimer()">stop timer</button>
+      <p>timer data and methods from services dependecy injection:</p>
+      <p class="green">store time: {{ services.storeFromInjection.timer }}</p>
+      <button @click="services.storeFromInjection.startTimer()">start time</button>
+      <button @click="services.storeFromInjection.stopTimer()">stop timer</button>
 
-    <hr>
+      <hr>
 
+    </div>
   </div>
 </template>
 
 <script>
+import Navigation from '@/components/Navigation'
+
 // store provided by direct import
 import store from '@/services/store'
 // services service used for dependecy injection
@@ -30,6 +35,9 @@ import services from '@/services'
 
 export default {
   name: 'StoreTest',
+  components: {
+    Navigation
+  },
   data () {
     return {
       // private data (non-injected)

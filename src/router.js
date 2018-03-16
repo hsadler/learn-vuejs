@@ -1,29 +1,32 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Home from './views/Home.vue'
+import Home from '@/views/Home.vue'
 
 // getting to know vue-router
-import RouterTest from './views/router-test/RouterTest.vue'
-import NormalRoute from './views/router-test/NormalRoute.vue'
-import DynamicRoute from './views/router-test/DynamicRoute.vue'
-import NestedRoute from './views/router-test/NestedRoute.vue'
-import NestedA from './views/router-test/nested/NestedA.vue'
-import NestedB from './views/router-test/nested/NestedB.vue'
-import WithQueryParams from './views/router-test/WithQueryParams.vue'
-import ToRedirect from './views/router-test/ToRedirect.vue'
-import Redirected from './views/router-test/Redirected.vue'
-import To404 from './views/router-test/To404.vue'
+import RouterTest from '@/views/router-test/RouterTest.vue'
+import NormalRoute from '@/views/router-test/NormalRoute.vue'
+import DynamicRoute from '@/views/router-test/DynamicRoute.vue'
+import NestedRoute from '@/views/router-test/NestedRoute.vue'
+import NestedA from '@/views/router-test/nested/NestedA.vue'
+import NestedB from '@/views/router-test/nested/NestedB.vue'
+import WithQueryParams from '@/views/router-test/WithQueryParams.vue'
+import ToRedirect from '@/views/router-test/ToRedirect.vue'
+import Redirected from '@/views/router-test/Redirected.vue'
+import To404 from '@/views/router-test/To404.vue'
 
 // getting to know components and directives
-import ComponentsTest from './views/ComponentsTest.vue'
-import DirectivesTest from './views/DirectivesTest.vue'
+import ComponentsTest from '@/views/ComponentsTest.vue'
+import DirectivesTest from '@/views/DirectivesTest.vue'
 
 // getting to know store (state managment)
-import StoreTest from './views/StoreTest.vue'
+import StoreTest from '@/views/StoreTest.vue'
 
 // getting to know http (API calls)
-import HttpTest from './views/HttpTest.vue'
+import HttpTest from '@/views/HttpTest.vue'
+
+// getting to know Vuetify (UI framework)
+import VuetifyTest from '@/views/VuetifyTest.vue'
 
 Vue.use(VueRouter)
 
@@ -110,6 +113,11 @@ export default new VueRouter({
       path: '/http-test',
       name: 'HttpTest',
       component: HttpTest
+    },
+    {
+      path: '/vuetify-test',
+      name: 'VuetifyTest',
+      component: VuetifyTest
     }
 
   ]

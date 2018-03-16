@@ -1,28 +1,9 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/router-test">Router Test</router-link> |
-      <router-link to="/components-test">Components Test</router-link> |
-      <router-link to="/directives-test">Directives Test</router-link> |
-      <router-link to="/store-test">Store Test</router-link> |
-      <router-link to="/http-test">Http Test</router-link>
-    </div>
     <router-view></router-view>
   </div>
 </template>
 
 <style lang="scss">
   @import 'src/styles/app-global.scss';
-
-  #nav {
-    padding: 30px;
-    a {
-      font-weight: bold;
-      color: #2c3e50;
-      &.router-link-exact-active {
-        color: #42b983;
-      }
-    }
-  }
 </style>
