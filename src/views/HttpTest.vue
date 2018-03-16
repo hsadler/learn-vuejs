@@ -4,7 +4,7 @@
     <div class="http-test-container">
       <h1>Http Test</h1>
       <p>the http response:</p>
-      <p class="green">{{ httpResponse }}</p>
+      <p class="learn-vue-green">{{ httpResponse }}</p>
     </div>
   </div>
 </template>

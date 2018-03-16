@@ -4,7 +4,7 @@
     <p>username: {{ username }}</p>
     <p>passcode: {{ passcode }}</p>
     <p>time: {{ time }}</p>
-    <button @click="resetTime()">Reset time</button>
+    <button class="learn-vue-button" @click="resetTime()">Reset time</button>
     <p class="disclamer">
       with throw warning and not work properly since <br>
       attempting to mutate a passed prop...

@@ -23,13 +23,13 @@
       <p v-if="mode === 0">v-if: <span>mode={{ mode }}</span></p>
       <p v-else-if="mode === 1">v-else-if: <span>mode={{ mode }}</span></p>
       <p v-else>v-else: <span>mode={{ mode }}</span></p>
-      <button @click="updateMode">update mode</button>
+      <button class="learn-vue-button" @click="updateMode">update mode</button>
 
       <hr>
 
       <p>v-for:</p>
       <p
-        class="green"
+        class="learn-vue-green"
         v-for="(score, index) in scores"
         :key="score"
       >
@@ -39,8 +39,9 @@
       <hr>
 
       <p>v-on:</p>
-      <p class="green">keydown key: {{ currEvent ? currEvent.key : 'none' }}</p>
+      <p class="learn-vue-green">keydown key: {{ currEvent ? currEvent.key : 'none' }}</p>
       <input
+        class="learn-vue"
         v-on:keydown="viewEvent($event)"
         placeholder="type here"
       >
@@ -53,7 +54,11 @@
       <hr>
 
       <p>v-model:</p>
-      <textarea v-model="textareaInput" placeholder="type here"></textarea>
+      <textarea
+        class="learn-vue"
+        v-model="textareaInput"
+        placeholder="type here"
+      ></textarea>
       <p>
         <strong>What you've entered:</strong><br>
         <span>{{textareaInput}}</span>
@@ -83,7 +88,7 @@ export default {
       mode: 0,
       scores: [123, 456, 789],
       currEvent: null,
-      classStr: 'purple',
+      classStr: 'learn-vue-purple',
       textareaInput: null,
       notCompiled: 'I will never be injected into to template'
     }
@@ -110,9 +115,6 @@ export default {
     width: 400px;
     margin: 0 auto;
     padding-bottom: 100px;
-    .purple {
-      color: purple;
-    }
     p {
       display: block;
       margin: 10px 0;
@@ -121,6 +123,7 @@ export default {
       }
     }
     textarea {
+      border: 1px solid gray;
       width: 300px;
       height: 60px;
     }

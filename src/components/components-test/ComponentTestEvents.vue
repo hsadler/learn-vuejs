@@ -2,12 +2,13 @@
   <div>
     <h2>{{ $options.name }}</h2>
     <p>{{ time }}</p>
-    <button @click="resetTime()">resetTime</button>
+    <button class="learn-vue-button" @click="resetTime()">resetTime</button>
     <input
+      class="learn-vue"
       v-model="newTime"
       placeholder="enter new time"
     >
-    <button @click="setTime()">setTime</button>
+    <button class="learn-vue-button" @click="setTime()">setTime</button>
   </div>
 </template>
 
@@ -42,8 +43,8 @@ export default {
       color: green;
     }
     button {
-      display: block;
-      margin: 0 auto 20px auto;
+      display: block !important;
+      margin: 0 auto 20px auto !important;
     }
     input {
       display: block;

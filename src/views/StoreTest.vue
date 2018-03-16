@@ -8,16 +8,36 @@
       <hr>
 
       <p>timer data and methods from direct import:</p>
-      <p class="green">store time: {{ services.storeFromImport.timer }}</p>
-      <button @click="services.storeFromImport.startTimer()">start time</button>
-      <button @click="services.storeFromImport.stopTimer()">stop timer</button>
+      <p class="learn-vue-green">store time: {{ services.storeFromImport.timer }}</p>
+      <button
+        class="learn-vue-button"
+        @click="services.storeFromImport.startTimer()"
+      >
+        start time
+      </button>
+      <button
+        class="learn-vue-button"
+        @click="services.storeFromImport.stopTimer()"
+      >
+        stop timer
+      </button>
 
       <hr>
 
       <p>timer data and methods from services dependecy injection:</p>
-      <p class="green">store time: {{ services.storeFromInjection.timer }}</p>
-      <button @click="services.storeFromInjection.startTimer()">start time</button>
-      <button @click="services.storeFromInjection.stopTimer()">stop timer</button>
+      <p class="learn-vue-green">store time: {{ services.storeFromInjection.timer }}</p>
+      <button
+        class="learn-vue-button"
+        @click="services.storeFromInjection.startTimer()"
+      >
+        start time
+      </button>
+      <button
+        class="learn-vue-button"
+        @click="services.storeFromInjection.stopTimer()"
+      >
+        stop timer
+      </button>
 
       <hr>
 

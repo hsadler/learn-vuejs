@@ -41,7 +41,7 @@ Styles:
     X global/scoped scss
 
 UI Framework:
-    - incorporate Vuetify
+    X incorporate Vuetify
     - test layouts and components
 
 

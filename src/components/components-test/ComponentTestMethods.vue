@@ -2,7 +2,7 @@
   <div>
     <h2>{{ $options.name }}</h2>
     <p>{{ arr[currIndex] }}</p>
-    <button @click="nextIndex()">Next word</button>
+    <button class="learn-vue-button" @click="nextIndex()">Next word</button>
   </div>
 </template>
 

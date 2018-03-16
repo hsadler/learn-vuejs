@@ -3,7 +3,12 @@
     <h2>{{ $options.name }}</h2>
     <p>async value: {{ asyncVal ? asyncVal : 'null' }}</p>
     <p>get async value status: {{ asyncValStatus }}</p>
-    <button @click="getAsyncVal()">Get async value</button>
+    <button
+      class="learn-vue-button"
+      @click="getAsyncVal()"
+    >
+      Get async value
+    </button>
   </div>
 </template>
 

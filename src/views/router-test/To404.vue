@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>404 - PAGE NOT FOUND</h1>
-    <button @click="goBack()">Go back</button>
+    <button class="learn-vue-button" @click="goBack()">Go back</button>
   </div>
 </template>
 

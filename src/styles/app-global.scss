@@ -5,5 +5,24 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  .green { color: green }
+  p {
+  	margin-top: 10px;
+  	margin-bottom: 10px;
+  }
+  input, textarea {
+  	&.learn-vue {
+  		font-size: 12px;
+	  	border: 1px solid lightgray;
+	  	margin-bottom: 10px;
+  	}
+  }
+  button.learn-vue-button {
+  	font-size: 12px;
+  	padding: 3px;
+  	margin: 0 5px 10px 5px;
+  	border: 1px solid gray;
+  	border-radius: 3px;
+  }
+  .learn-vue-green { color: green }
+  .learn-vue-purple { color: purple }
 }

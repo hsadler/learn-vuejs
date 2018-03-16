@@ -3,7 +3,12 @@
     <h2>{{ $options.name }}</h2>
     <p>{{ greeting }}</p>
     <p>{{ compAge }}</p>
-    <button @click="compAge = age + 1">Add to age</button>
+    <button
+      class="learn-vue-button"
+      @click="compAge = age + 1"
+    >
+      Add to age
+    </button>
   </div>
 </template>
 
