@@ -42,7 +42,7 @@ Styles:
 
 UI Framework:
     X incorporate Vuetify
-    - test layouts and components
+    X test layouts and components
 
 
 
