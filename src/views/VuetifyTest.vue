@@ -83,7 +83,10 @@
 
           <v-divider></v-divider>
 
-          <!-- bottom nav (https://vuetifyjs.com/en/components/bottom-navigation) -->
+          <!--
+              bottom navigation
+              (https://vuetifyjs.com/en/components/bottom-navigation)
+            -->
           <v-flex class="pa-2">
             <p>Bottom Navigation:</p>
             <div
@@ -109,7 +112,10 @@
 
           <v-divider></v-divider>
 
-          <!-- bottom sheet (https://vuetifyjs.com/en/components/bottom-sheets) -->
+          <!--
+            bottom sheet
+            (https://vuetifyjs.com/en/components/bottom-sheets)
+          -->
           <v-flex class="pa-2">
             <p>Bottom Sheet:</p>
             <v-bottom-sheet v-model="sheet">
@@ -260,7 +266,10 @@
 
           <v-divider></v-divider>
 
-          <!-- data iterator (https://vuetifyjs.com/en/components/data-iterator) -->
+          <!--
+            data iterator
+            (https://vuetifyjs.com/en/components/data-iterator)
+          -->
           <v-flex class="pa-2">
             <p>Data Iterator:</p>
             <v-container fluid grid-list-md>
@@ -410,7 +419,10 @@
                 </v-card>
               </v-dialog>
               <v-dialog
-                v-model="dialog_2" fullscreen transition="dialog-bottom-transition" :overlay="false">
+                v-model="dialog_2"
+                fullscreen transition="dialog-bottom-transition"
+                :overlay="false"
+              >
                 <v-btn color="primary" slot="activator">Open Dialog</v-btn>
                 <v-card>
                   <v-toolbar dark color="primary">
@@ -420,7 +432,13 @@
                     <v-toolbar-title>Settings</v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-toolbar-items>
-                      <v-btn dark flat @click.native="dialog_2 = false">Save</v-btn>
+                      <v-btn
+                        dark
+                        flat
+                        @click.native="dialog_2 = false"
+                      >
+                        Save
+                      </v-btn>
                     </v-toolbar-items>
                   </v-toolbar>
                   <p class="headline">Stuff goes here...</p>
@@ -435,7 +453,7 @@
           <!-- dividers (https://vuetifyjs.com/en/components/dividers) -->
           <v-flex class="pa-2">
             <p>Dividers:</p>
-            <layout column>
+            <v-layout row wrap>
               <v-flex
                 v-for="(item, index) in [1,2,3]"
                 :key="item"
@@ -445,35 +463,388 @@
                 <v-subheader>Hello: {{ index }}</v-subheader>
                 <v-divider></v-divider>
               </v-flex>
-            </layout>
+            </v-layout>
           </v-flex>
 
           <v-divider></v-divider>
 
-          <!-- buttons -->
+          <!--
+            expansion panel
+            (https://vuetifyjs.com/en/components/expansion-panels)
+          -->
           <v-flex class="pa-2">
-            <v-btn>Hi!</v-btn>
+            <p>Expansion Panel:</p>
+            <v-flex xs4 offset-xs4>
+              <v-expansion-panel>
+                <v-expansion-panel-content v-for="(item,i) in 5" :key="i">
+                  <div slot="header">Item: {{ i }}</div>
+                  <v-card>
+                    <v-card-text>{{ cardText }}</v-card-text>
+                  </v-card>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+            </v-flex>
           </v-flex>
 
           <v-divider></v-divider>
 
-          <!-- buttons -->
+          <!-- footer (https://vuetifyjs.com/en/components/footer) -->
           <v-flex class="pa-2">
-            <v-btn>Hi!</v-btn>
+            <p>Footer:</p>
+            <v-footer height="auto" class="indigo lighten-1">
+              <v-layout row wrap justify-center>
+                <v-btn
+                  color="white"
+                  flat
+                  v-for="link in footerLinks"
+                  :key="link"
+                >
+                  {{ link }}
+                </v-btn>
+                <v-flex xs12 py-3 text-xs-center white--text>
+                  &copy;{{ new Date().getFullYear() }}
+                </v-flex>
+              </v-layout>
+            </v-footer>
           </v-flex>
 
           <v-divider></v-divider>
 
-          <!-- buttons -->
+          <!-- form (https://vuetifyjs.com/en/components/forms) -->
           <v-flex class="pa-2">
-            <v-btn>Hi!</v-btn>
+            <p>Form:</p>
+            <v-flex xs4 offset-xs4>
+              <v-form v-model="form.valid">
+                <v-text-field
+                  label="Name"
+                  v-model="form.name"
+                  :rules="form.nameRules"
+                  :counter="10"
+                  required
+                ></v-text-field>
+                <v-text-field
+                  label="E-mail"
+                  v-model="form.email"
+                  :rules="form.emailRules"
+                  required
+                ></v-text-field>
+              </v-form>
+            </v-flex>
           </v-flex>
 
           <v-divider></v-divider>
 
-          <!-- buttons -->
+          <!-- selects (https://vuetifyjs.com/en/components/selects) -->
           <v-flex class="pa-2">
-            <v-btn>Hi!</v-btn>
+            <p>Selects:</p>
+            <v-flex xs8 offset-xs2>
+              <v-container fluid>
+                <v-layout row wrap>
+                  <v-flex xs6>
+                    <v-subheader>Standard</v-subheader>
+                  </v-flex>
+                  <v-flex xs6>
+                    <v-select
+                      :items="selects.items"
+                      v-model="selects.e1"
+                      label="Select"
+                      single-line
+                    ></v-select>
+                  </v-flex>
+                  <v-flex xs6>
+                    <v-subheader>Standard with focus</v-subheader>
+                  </v-flex>
+                  <v-flex xs6>
+                    <v-select
+                      :items="selects.items"
+                      v-model="selects.e2"
+                      label="Select"
+                      class="input-group--focused"
+                      item-value="text"
+                    ></v-select>
+                  </v-flex>
+                  <v-flex xs6>
+                    <v-subheader>Error</v-subheader>
+                  </v-flex>
+                  <v-flex xs6>
+                    <v-select
+                      label="Select"
+                      :items="selects.items"
+                      v-model="selects.e3"
+                      :error-messages="['Please select an option']"
+                      item-value="text"
+                    ></v-select>
+                  </v-flex>
+                  <v-flex xs6>
+                    <v-subheader>Disabled</v-subheader>
+                  </v-flex>
+                  <v-flex xs6>
+                    <v-select
+                      label="Select"
+                      :items="selects.items"
+                      v-model="selects.e4"
+                      disabled
+                    ></v-select>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-flex>
+          </v-flex>
+
+          <v-divider></v-divider>
+
+          <!--
+            selection controls
+            (https://vuetifyjs.com/en/components/selection-controls)
+          -->
+          <v-flex class="pa-2">
+            <p>Selection Controls:</p>
+            <v-flex xs7 offset-xs5>
+              <v-container>
+                <v-checkbox
+                  :label="`Checkbox 1: ${selectionControls.checkbox.toString()}`"
+                  v-model="selectionControls.checkbox"
+                  color="blue-grey"
+                ></v-checkbox>
+                <v-radio-group v-model="selectionControls.radioGroup">
+                  <v-radio
+                    v-for="n in 3"
+                    :key="n"
+                    :label="`Radio ${n}`"
+                    :value="n"
+                    color="green"
+                  ></v-radio>
+                </v-radio-group>
+                <v-switch
+                  :label="`Switch 1: ${selectionControls.switch1.toString()}`"
+                  v-model="selectionControls.switch1"
+                  color="orange"
+                ></v-switch>
+              </v-container>
+            </v-flex>
+          </v-flex>
+
+          <v-divider></v-divider>
+
+          <!-- text fields -->
+          <v-flex class="pa-2">
+            <p>Text Fields:</p>
+            <v-flex xs8 offset-xs2>
+
+              <v-layout row>
+                <v-flex xs4>
+                  <v-subheader>Normal with hint text/label</v-subheader>
+                </v-flex>
+                <v-flex xs8>
+                  <v-text-field
+                    name="input-1"
+                    label="Label Text"
+                    id="testing"
+                  ></v-text-field>
+                </v-flex>
+              </v-layout>
+
+              <v-layout row>
+                <v-flex xs4>
+                  <v-subheader>Focus</v-subheader>
+                </v-flex>
+                <v-flex xs8>
+                  <v-text-field
+                    name="input-2"
+                    label="Label Text"
+                    value="Input text"
+                    class="input-group--focused"
+                  ></v-text-field>
+                </v-flex>
+              </v-layout>
+
+              <v-layout row>
+                <v-flex xs4>
+                  <v-subheader>Disabled</v-subheader>
+                </v-flex>
+                <v-flex xs8>
+                  <v-text-field
+                    name="input-3"
+                    label="Label Text"
+                    value="Input text"
+                    disabled
+                  ></v-text-field>
+                </v-flex>
+              </v-layout>
+
+              <v-layout row wrap>
+                <v-flex xs12>
+                  <v-text-field
+                    label="Title"
+                    :rules="[(v) => v.length <= 25 || 'Max 25 characters']"
+                    :counter="25"
+                    v-model="title"
+                  ></v-text-field>
+                </v-flex>
+                <v-flex xs12>
+                  <v-text-field
+                    label="Description"
+                    :rules="[(v) => v.length <= 50 || 'Max 50 characters']"
+                    :counter="50"
+                    v-model="description"
+                  ></v-text-field>
+                </v-flex>
+              </v-layout>
+
+              <v-layout row>
+                <v-flex xs12>
+                  <v-text-field
+                    name="input-1"
+                    label="Label Text"
+                    textarea
+                  ></v-text-field>
+                </v-flex>
+              </v-layout>
+
+              <v-container fluid>
+                <v-checkbox
+                  label="Custom progress bar"
+                  v-model="textFieldProgress.custom"
+                ></v-checkbox>
+                <v-text-field
+                  color="cyan darken"
+                  label="Text field"
+                  placeholder="Start typing..."
+                  v-model="textFieldProgress.value"
+                  loading
+                >
+                  <v-progress-linear
+                    v-if="textFieldProgress.custom"
+                    slot="progress"
+                    :value="progress"
+                    height="7"
+                    :color="color"
+                  ></v-progress-linear>
+                </v-text-field>
+              </v-container>
+
+            </v-flex>
+          </v-flex>
+
+          <v-divider></v-divider>
+
+          <!-- icons -->
+          <v-flex class="pa-2">
+            <p>Icons:</p>
+            <v-flex xs4 offset-xs4>
+              <v-layout justify-space-around class="mb-2">
+                <span class="group pa-2">
+                  <v-icon>home</v-icon>
+                  <v-icon>event</v-icon>
+                  <v-icon>info</v-icon>
+                </span>
+
+                <span class="group pa-2 teal">
+                  <v-icon dark>folder_open</v-icon>
+                  <v-icon dark>widgets</v-icon>
+                  <v-icon dark>gavel</v-icon>
+                </span>
+              </v-layout>
+
+              <v-layout justify-space-around class="mb-2">
+                <span class="group pa-2">
+                  <v-icon medium>home</v-icon>
+                  <v-icon medium>event</v-icon>
+                  <v-icon medium>info</v-icon>
+                </span>
+
+                <span class="group pa-2 teal">
+                  <v-icon medium dark>folder_open</v-icon>
+                  <v-icon medium dark>widgets</v-icon>
+                  <v-icon medium dark>gavel</v-icon>
+                </span>
+              </v-layout>
+
+              <v-layout justify-space-around class="mb-2">
+                <span class="group pa-2">
+                  <v-icon large>home</v-icon>
+                  <v-icon large>event</v-icon>
+                  <v-icon large>info</v-icon>
+                </span>
+
+                <span class="group pa-2 teal">
+                  <v-icon large dark>folder_open</v-icon>
+                  <v-icon large dark>widgets</v-icon>
+                  <v-icon large dark>gavel</v-icon>
+                </span>
+              </v-layout>
+
+              <v-layout justify-space-around>
+                <span class="group pa-2">
+                  <v-icon x-large>home</v-icon>
+                  <v-icon x-large>event</v-icon>
+                  <v-icon x-large>info</v-icon>
+                </span>
+
+                <span class="group pa-2 teal">
+                  <v-icon x-large dark>folder_open</v-icon>
+                  <v-icon x-large dark>widgets</v-icon>
+                  <v-icon x-large dark>gavel</v-icon>
+                </span>
+              </v-layout>
+            </v-flex>
+          </v-flex>
+
+          <v-divider></v-divider>
+
+          <!-- lists -->
+          <v-flex class="pa-2">
+            <p>Lists:</p>
+            <v-flex xs6 offset-xs3>
+              <v-list two-line>
+                <template v-for="(item, index) in listItems.items">
+                  <v-subheader
+                    v-if="item.header"
+                    :key="item.header"
+                  >
+                    {{ item.header }}
+                  </v-subheader>
+                  <v-divider
+                    v-else-if="item.divider"
+                    :inset="item.inset"
+                    :key="index"
+                  ></v-divider>
+                  <v-list-tile avatar v-else :key="item.title">
+                    <v-list-tile-avatar>
+                      <img :src="item.avatar">
+                    </v-list-tile-avatar>
+                    <v-list-tile-content>
+                      <v-list-tile-title
+                        v-html="item.title"
+                      ></v-list-tile-title>
+                      <v-list-tile-sub-title
+                        v-html="item.subtitle"
+                      ></v-list-tile-sub-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                </template>
+              </v-list>
+            </v-flex>
+          </v-flex>
+
+          <v-divider></v-divider>
+
+          <!-- jumbotron -->
+          <v-flex class="pa-2">
+            <p>Jumbotrons:</p>
+            <v-jumbotron color="brown darken-2" dark>
+              <v-container fill-height>
+                <v-layout align-center>
+                  <v-flex class="text-xs-left">
+                    <h3 class="display-3">Welcome to the site</h3>
+                    <span class="subheading">{{ cardText }}</span>
+                    <v-divider class="my-3"></v-divider>
+                    <div class="title mb-3">Check out our newest features!</div>
+                    <v-btn large color="primary" class="mx-0">See more</v-btn>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-jumbotron>
           </v-flex>
 
           <v-divider></v-divider>
@@ -489,7 +860,7 @@
     </v-content>
 
     <v-footer app fixed>
-      <span>&copy; 2017</span>
+      <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
 
   </v-app>
@@ -498,8 +869,11 @@
 
 <script>
 export default {
+  props: {
+    source: String
+  },
   data: () => ({
-    darkTheme: false,
+    darkTheme: true,
     drawer: false,
     e1: 'recent',
     sheet: false,
@@ -737,10 +1111,95 @@ export default {
       }
     ],
     dialog_1: false,
-    dialog_2: false
+    dialog_2: false,
+    footerLinks: ['Home', 'About Us', 'Team', 'Services', 'Blog', 'Contact Us'],
+    selects: {
+      e1: null,
+      e2: null,
+      e3: null,
+      e4: null,
+      items: [
+        { text: 'State 1' },
+        { text: 'State 2' },
+        { text: 'State 3' },
+        { text: 'State 4' },
+        { text: 'State 5' },
+        { text: 'State 6' },
+        { text: 'State 7' }
+      ]
+    },
+    form: {
+      valid: false,
+      name: '',
+      nameRules: [
+        v => !!v || 'Name is required',
+        v => v.length <= 10 || 'Name must be less than 10 characters'
+      ],
+      email: '',
+      emailRules: [
+        v => !!v || 'E-mail is required',
+        v => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
+      ]
+    },
+    selectionControls: {
+      checkbox: true,
+      radioGroup: 1,
+      switch1: true
+    },
+    textFieldProgress: {
+      value: '',
+      custom: true
+    },
+    listItems: {
+      items: [
+        {
+          header: 'Today'
+        },
+        {
+          avatar: require('@/assets/logo.png'),
+          title: 'Brunch this weekend?',
+          // eslint-disable-next-line
+          subtitle: "<span class='text--primary'>Ali Connors</span> &mdash; \
+           I'll be in your neighborhood doing errands this weekend. Do you \
+            want to hang out?"
+        },
+        {
+          divider: true,
+          inset: true
+        },
+        {
+          avatar: require('@/assets/logo.png'),
+          title: 'Summer BBQ <span class="grey--text text--lighten-1">4</span>',
+          // eslint-disable-next-line
+          subtitle: "<span class='text--primary'>to Alex, Scott, \
+            Jennifer</span> &mdash; Wish I could come, but I'm out of town \
+            this weekend."
+        },
+        {
+          divider: true,
+          inset: true
+        },
+        {
+          avatar: require('@/assets/logo.png'),
+          title: 'Oui oui',
+          // eslint-disable-next-line
+          subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; \
+            Do you have Paris recommendations? Have you ever been?"
+        }
+      ]
+    }
   }),
-  props: {
-    source: String
+  computed: {
+    progress () {
+      return Math.min(100, this.textFieldProgress.value.length * 10)
+    },
+    color () {
+      return [
+        'error',
+        'warning',
+        'success'
+      ][Math.floor(this.progress / 40)]
+    }
   },
   methods: {
     handleCustomButtonClick () {
